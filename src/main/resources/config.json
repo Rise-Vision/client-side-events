@@ -181,6 +181,11 @@
           "nullable": false
         },
         {
+          "name": "widget",
+          "type": "string",
+          "nullable": false
+        },
+        {
           "name": "event_details",
           "type": "string",
           "nullable": true
@@ -191,9 +196,24 @@
           "nullable": true
         },
         {
-          "name": "widget",
+          "name": "company_id",
           "type": "string",
-          "nullable": false
+          "nullable": true
+        },
+        {
+          "name": "file_name",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "file_format",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "file_size",
+          "type": "string",
+          "nullable": true
         },
         {
           "name": "ts",
