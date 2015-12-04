@@ -215,6 +215,48 @@
     {
       "projectId": "client-side-events",
       "dataset": "Widget_Events",
+      "tableNamePrefix": "image_events",
+      "fields": [
+        {
+          "name": "event",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "event_details",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "display_id",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "company_id",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "file_url",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "file_format",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "ts",
+          "type": "TIMESTAMP",
+          "nullable": false
+        }
+      ]
+    },
+    {
+      "projectId": "client-side-events",
+      "dataset": "Widget_Events",
       "tableNamePrefix": "video_memory_usage",
       "fields": [
         {
