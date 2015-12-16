@@ -228,6 +228,11 @@
           "nullable": true
         },
         {
+          "name": "error_details",
+          "type": "string",
+          "nullable": true
+        },
+        {
           "name": "display_id",
           "type": "string",
           "nullable": true
