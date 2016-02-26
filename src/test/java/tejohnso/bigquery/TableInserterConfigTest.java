@@ -4,10 +4,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
-public class ConfigTest {
+public class TableInserterConfigTest {
   @Test
   public void itExists() {
-    assertThat(Config.class, notNullValue());
+    assertThat(TableInserterConfig.class, notNullValue());
   }
 
   @Test
