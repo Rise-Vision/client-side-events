@@ -1,18 +1,28 @@
 package tejohnso.bigquery;
 
 import com.google.gson.Gson;
-import java.util.*;
+
 import java.io.*;
-import java.util.logging.Logger;
 
 class ConfigLoader {
-  static final InputStream configFileStream = ConfigLoader.class.getClassLoader().getResourceAsStream
-  ("config.json");
 
-  static final InputStreamReader reader = new InputStreamReader(configFileStream);
+  static <E> E loadConfig(String fileName, Class<E> eClass) {
 
-  private static final Config config = new Gson().fromJson(reader, Config.class);
-  private static final Logger log = Logger.getAnonymousLogger();
+    InputStream configFileStream = ConfigLoader.class.getClassLoader().getResourceAsStream
+            (fileName);
 
-  public static Config getConfig() {return config;}
+    InputStreamReader reader = new InputStreamReader(configFileStream);
+
+    return new Gson().fromJson(reader, eClass);
+  }
+
+  final static TableInserterConfig tableInserterConfig = loadConfig
+          ("table-inserter-config.json", TableInserterConfig.class);
+
+  final static JobSchedulerConfig jobSchedulerConfig = loadConfig
+          ("job-scheduler-config.json", JobSchedulerConfig.class);
+
+  public static TableInserterConfig getTableInserterConfig() {return tableInserterConfig;}
+
+  public static JobSchedulerConfig getJobSchedulerConfig() {return jobSchedulerConfig;}
 }

@@ -12,6 +12,6 @@ public class TableInserterConfigTest {
 
   @Test
   public void itLoadsConfig() {
-    assertThat(ConfigLoader.getConfig().tables.size() > 0, is(true));
+    assertThat(ConfigLoader.getTableInserterConfig().tables.size() > 0, is(true));
   }
 }

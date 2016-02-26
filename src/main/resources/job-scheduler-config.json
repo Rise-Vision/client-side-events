@@ -1,0 +1,27 @@
+{
+  "projectId": "client-side-events",
+  "configuration":
+  {
+    "query":
+    {
+      "createDisposition": "WRITE_TRUNCATE",
+      "destinationTable":
+      {
+        "projectId": "client-side-events",
+        "datasetId": "Aggregate_Tables"
+      }
+    }
+  },
+
+  "every4Hours": [
+
+  ],
+
+  "every24Hours": [
+    {
+      "destinationTableId": "DisplayCountByInstallerType",
+      "fileName": "queries/display-count-by-installer-type.sql"
+    }
+  ]
+
+}
