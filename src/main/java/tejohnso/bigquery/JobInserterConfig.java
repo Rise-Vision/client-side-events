@@ -17,7 +17,7 @@ class JobInserterConfig {
   }
 
   static class QueryConfiguration {
-    String createDisposition;
+    String writeDisposition;
     TableInfo destinationTable;
   }
 

@@ -45,7 +45,7 @@ public class BigqueryJobsApi extends BigqueryCommonApi implements JobsApi{
 
     // Configuration common to all jobs
     jobReference.setProjectId(configuration.projectId);
-    jobConfigurationQuery.setCreateDisposition(configuration.configuration.query.createDisposition);
+    jobConfigurationQuery.setWriteDisposition(configuration.configuration.query.writeDisposition);
     destinationTable.setProjectId(configuration.configuration.query.destinationTable.projectId);
     destinationTable.setDatasetId(configuration.configuration.query.destinationTable.datasetId);
 

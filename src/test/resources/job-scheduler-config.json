@@ -4,25 +4,25 @@
   {
     "query":
     {
-      "createDisposition": "WRITE_TRUNCATE",
+      "writeDisposition": "WRITE_TRUNCATE",
       "destinationTable":
       {
         "projectId": "destination-table-project",
-        "datasetId": "dataset-id"
+        "datasetId": "dataset_id"
       }
     }
   },
 
   "every4Hours": [
     {
-      "destinationTableId": "destination-table-id",
+      "destinationTableId": "destination_table_id",
       "fileName": "queries/4-query.sql"
     }
   ],
 
   "every24Hours": [
     {
-      "destinationTableId": "destination-table-id",
+      "destinationTableId": "destination_table_id",
       "fileName": "queries/24-query.sql"
     }
   ]

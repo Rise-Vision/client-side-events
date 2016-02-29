@@ -7,8 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class InsertJobsHandler extends HttpServlet {
+  JobInserter inserter;
+  private Logger log = Logger.getAnonymousLogger();
   private static UrlFetchTransport transport = new UrlFetchTransport();
 
   public void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -32,8 +35,9 @@ public class InsertJobsHandler extends HttpServlet {
       resp.sendError(404);
       return;
     }
-    JobInserter inserter = new JobInserter(new BigqueryJobsApi(transport));
 
+    log.info("Inserting " + jobConfigs.size() + " jobs");
+    inserter = new JobInserter(new BigqueryJobsApi(transport));
     inserter.insertJobs(jobConfigs);
   }
 }
