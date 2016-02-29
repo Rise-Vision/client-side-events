@@ -2,7 +2,7 @@ package tejohnso.bigquery;
 
 import java.util.List;
 
-class JobSchedulerConfig {
+class JobInserterConfig {
 
   String projectId;
 

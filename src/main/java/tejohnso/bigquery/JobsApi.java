@@ -1,6 +1,6 @@
 package tejohnso.bigquery;
 
 public interface JobsApi {
-  void insertJob(JobSchedulerConfig configuration,
-                 JobSchedulerConfig.IndividualQueryConfiguration queryConfiguration);
+  void insertJob(JobInserterConfig configuration,
+                 JobInserterConfig.IndividualQueryConfiguration queryConfiguration);
 }

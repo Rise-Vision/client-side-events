@@ -14,9 +14,9 @@ public class InsertJobsHandler extends HttpServlet {
   public void doGet(HttpServletRequest req, HttpServletResponse resp)
   throws IOException {
 
-    JobSchedulerConfig config = ConfigLoader.getJobSchedulerConfig();
+    JobInserterConfig config = ConfigLoader.getJobInserterConfig();
     String interval = req.getParameter("interval");
-    List<JobSchedulerConfig.IndividualQueryConfiguration> jobConfigs;
+    List<JobInserterConfig.IndividualQueryConfiguration> jobConfigs;
 
     if (interval.equals("4")) {
       jobConfigs = config.every4Hours;

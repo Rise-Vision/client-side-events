@@ -16,13 +16,13 @@ class ConfigLoader {
     return new Gson().fromJson(reader, eClass);
   }
 
-  final static TableInserterConfig tableInserterConfig = loadConfig
+  private final static TableInserterConfig tableInserterConfig = loadConfig
           ("table-inserter-config.json", TableInserterConfig.class);
 
-  final static JobSchedulerConfig jobSchedulerConfig = loadConfig
-          ("job-scheduler-config.json", JobSchedulerConfig.class);
+  private final static JobInserterConfig JOB_INSERTER_CONFIG = loadConfig
+          ("job-scheduler-config.json", JobInserterConfig.class);
 
   public static TableInserterConfig getTableInserterConfig() {return tableInserterConfig;}
 
-  public static JobSchedulerConfig getJobSchedulerConfig() {return jobSchedulerConfig;}
+  public static JobInserterConfig getJobInserterConfig() {return JOB_INSERTER_CONFIG;}
 }

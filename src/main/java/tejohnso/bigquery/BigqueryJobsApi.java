@@ -17,8 +17,8 @@ public class BigqueryJobsApi extends BigqueryCommonApi implements JobsApi{
   static final Logger log = Logger.getAnonymousLogger();
 
   @Override
-  public void insertJob(JobSchedulerConfig configuration,
-                        JobSchedulerConfig.IndividualQueryConfiguration queryConfiguration) {
+  public void insertJob(JobInserterConfig configuration,
+                        JobInserterConfig.IndividualQueryConfiguration queryConfiguration) {
     try {
       Job job = assembleJob(configuration, queryConfiguration);
       bqClient.jobs().insert(configuration.projectId, job).execute();
@@ -27,9 +27,8 @@ public class BigqueryJobsApi extends BigqueryCommonApi implements JobsApi{
     }
   }
 
-
-  protected Job assembleJob(JobSchedulerConfig configuration,
-                  JobSchedulerConfig.IndividualQueryConfiguration queryConfiguration) throws IOException {
+  protected Job assembleJob(JobInserterConfig configuration,
+                  JobInserterConfig.IndividualQueryConfiguration queryConfiguration) throws IOException {
 
     Job job = new Job();
     JobConfiguration jobConfiguration = new JobConfiguration();
@@ -57,7 +56,7 @@ public class BigqueryJobsApi extends BigqueryCommonApi implements JobsApi{
     return job;
   }
 
-  private String readResource(String fileName) throws IOException {
+  String readResource(String fileName) throws IOException {
     InputStream is = InsertJobsHandler.class.getClassLoader().getResourceAsStream(fileName);
     return IOUtils.toString(is, "UTF-8");
   }
