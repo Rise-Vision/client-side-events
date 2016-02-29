@@ -18,7 +18,11 @@ public class InsertJobsHandler extends HttpServlet {
     String interval = req.getParameter("interval");
     List<JobInserterConfig.IndividualQueryConfiguration> jobConfigs;
 
-    if (interval.equals("4")) {
+    if(interval == null) {
+      resp.sendError(404);
+      return;
+
+    } else if (interval.equals("4")) {
       jobConfigs = config.every4Hours;
 
     } else if (interval.equals("24")) {
