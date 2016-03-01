@@ -1,4 +1,4 @@
-package tejohnso.bigquery;
+package com.risevision.bigquery;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.http.HttpTransport;

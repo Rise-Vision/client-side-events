@@ -1,4 +1,4 @@
-package tejohnso.bigquery;
+package com.risevision.bigquery;
 
 import java.util.*;
 

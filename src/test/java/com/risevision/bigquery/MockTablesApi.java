@@ -1,4 +1,4 @@
-package tejohnso.bigquery;
+package com.risevision.bigquery;
 
 class MockTablesApi implements TablesApi {
   int insertTableCallCount = 0;

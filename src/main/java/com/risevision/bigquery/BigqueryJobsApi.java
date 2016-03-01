@@ -1,4 +1,4 @@
-package tejohnso.bigquery;
+package com.risevision.bigquery;
 
 import com.google.api.client.http.HttpTransport;
 import com.google.api.services.bigquery.model.*;
