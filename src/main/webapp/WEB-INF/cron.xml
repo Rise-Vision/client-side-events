@@ -7,13 +7,13 @@
     <timezone>America/New_York</timezone>
   </cron>
   <cron>
-    <url>/insertJobsEvery?interval=24</url>
+    <url>/insertJobs?interval=24</url>
     <description>Run jobs scheduled every 24 hours</description>
     <schedule>every day 01:35</schedule>
     <timezone>America/New_York</timezone>
   </cron>
   <cron>
-    <url>/insertJobsEvery?interval=4</url>
+    <url>/insertJobs?interval=4</url>
     <description>Run jobs scheduled every 4 hours</description>
     <schedule>every 4 hours</schedule>
   </cron>

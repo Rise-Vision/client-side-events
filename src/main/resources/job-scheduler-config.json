@@ -14,7 +14,15 @@
   },
 
   "every4Hours": [
+    {
+      "destinationTableId": "UpgradeStats",
+      "fileName": "queries/upgrade-stats.sql"
+    },
 
+    {
+      "destinationTableId": "NewInstallationStats",
+      "fileName": "queries/new-installation-stats.sql"
+    }
   ],
 
   "every24Hours": [
