@@ -15,7 +15,7 @@ public class BigqueryJobsApiTest {
 
   @Test
   public void itExists() {
-    assertNotNull(BigqueryTablesApi.class);
+    assertNotNull(BigqueryJobsApi.class);
   }
 
   @Test

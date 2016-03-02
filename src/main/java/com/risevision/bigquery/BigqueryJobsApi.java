@@ -34,7 +34,7 @@ public class BigqueryJobsApi extends BigqueryCommonApi implements JobsApi{
     JobConfiguration jobConfiguration = new JobConfiguration();
     JobConfigurationQuery jobConfigurationQuery = new JobConfigurationQuery();
     JobReference jobReference = new JobReference();
-    String sqlQuery = readResource(queryConfiguration.fileName);
+    String sqlQuery = ConfigLoader.getQuery(queryConfiguration.fileName);
     TableReference destinationTable = new TableReference();
 
     // Prepare BigQuery request objects
@@ -54,10 +54,5 @@ public class BigqueryJobsApi extends BigqueryCommonApi implements JobsApi{
     destinationTable.setTableId(queryConfiguration.destinationTableId);
 
     return job;
-  }
-
-  String readResource(String fileName) throws IOException {
-    InputStream is = InsertJobsHandler.class.getClassLoader().getResourceAsStream(fileName);
-    return IOUtils.toString(is, "UTF-8");
   }
 }
