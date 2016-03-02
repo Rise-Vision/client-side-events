@@ -42,10 +42,15 @@ The configuration file follows the following schema:
 
 ```json
 {
-  "projectId": "destination-project",
-  "configuration":
-  {
-    ... 
+  "projectId": "billing-project",
+  "configuration": {
+    "query": {
+      "writeDisposition": "WRITE_TRUNCATE",
+      "destinationTable": {
+        "projectId": "destination-project",
+        "datasetId": "destination_dataset"
+      }
+    }
   },
   "every4Hours": [
     {
@@ -59,9 +64,12 @@ The configuration file follows the following schema:
 }
 ```
 
-The query result will be stored in `[client-side-events:Aggregate_Tables.destination_table_name]`.
+The query result will be stored in `[destination-project:destination_dataset.destination_table_name]`.
 
-N.B. the results will overwrite the previous contents of the table
+N.B. 1. the billing project, destination project, and destination dataset are currently global configuration options
+that are identical for all jobs.
+
+N.B. 2. the results will overwrite the previous contents of the table
 
 ## Usage
 

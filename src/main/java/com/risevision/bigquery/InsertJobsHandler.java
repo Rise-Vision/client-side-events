@@ -22,7 +22,7 @@ public class InsertJobsHandler extends HttpServlet {
     List<JobInserterConfig.IndividualQueryConfiguration> jobConfigs;
 
     if(interval == null) {
-      resp.sendError(404);
+      resp.sendError(400, "no interval parameter received");
       return;
 
     } else if (interval.equals("4")) {
@@ -32,7 +32,7 @@ public class InsertJobsHandler extends HttpServlet {
       jobConfigs = config.every24Hours;
 
     } else {
-      resp.sendError(404);
+      resp.sendError(400, "interval parameter set incorrectly");
       return;
     }
 
