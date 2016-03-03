@@ -1,0 +1,28 @@
+{
+  "projectId": "client-side-events",
+  "configuration": {
+    "query": {
+      "writeDisposition": "WRITE_TRUNCATE",
+      "destinationTable": {
+        "projectId": "client-side-events",
+        "datasetId": "Aggregate_Tables"
+      }
+    }
+  },
+  "every4Hours": [
+    {
+      "destinationTableId": "UpgradeStats",
+      "fileName": "queries/upgrade-stats.sql"
+    },
+    {
+      "destinationTableId": "NewInstallationStats",
+      "fileName": "queries/new-installation-stats.sql"
+    }
+  ],
+  "every24Hours": [
+    {
+      "destinationTableId": "DisplayCountByInstallerType",
+      "fileName": "queries/display-count-by-installer-type.sql"
+    }
+  ]
+}

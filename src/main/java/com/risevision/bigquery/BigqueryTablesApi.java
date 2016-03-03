@@ -1,39 +1,19 @@
-package tejohnso.bigquery;
+package com.risevision.bigquery;
 
 import java.util.*;
 import java.io.IOException;
-import com.google.api.services.bigquery.*;
-import com.google.api.client.json.jackson2.JacksonFactory;
-import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.services.bigquery.model.*;
 import java.util.logging.Logger;
 import com.google.api.client.http.HttpTransport;
 
-class BigqueryTablesApi implements TablesApi {
-  private GoogleCredential credential;
-  private Bigquery bqClient;
+class BigqueryTablesApi extends BigqueryCommonApi implements TablesApi{
   private static final Logger log = Logger.getAnonymousLogger();
 
-  public BigqueryTablesApi(HttpTransport transport) {
-    try {
-      credential = GoogleCredential.getApplicationDefault();
-    } catch (IOException e) {
-      log.severe(e.getMessage());
-    }
-
-    if (credential == null || transport == null) {
-      log.severe("Could not initiate credential");
-      return;
-    }
-
-    credential = credential.createScoped(Arrays.asList(BigqueryScopes.BIGQUERY));
-
-    bqClient = new Bigquery.Builder
-    (transport, JacksonFactory.getDefaultInstance(), credential)
-    .build();
+  BigqueryTablesApi(HttpTransport transport) {
+    super(transport);
   }
 
-  public void insertTable(Config.TableInfo tableInfo) {
+  public void insertTable(TableInserterConfig.TableInfo tableInfo) {
     String projectId = tableInfo.projectId;
     String dataset = tableInfo.dataset;
     Table table = assembleTable(tableInfo);
@@ -45,7 +25,7 @@ class BigqueryTablesApi implements TablesApi {
     }
   }
 
-  Table assembleTable(Config.TableInfo tableInfo) {
+  Table assembleTable(TableInserterConfig.TableInfo tableInfo) {
     TableReference ref = new TableReference();
     ref.setTableId(tableInfo.name);
     ref.setProjectId(tableInfo.projectId);
@@ -53,7 +33,7 @@ class BigqueryTablesApi implements TablesApi {
 
     TableSchema schema = new TableSchema();
     List<TableFieldSchema> fields = new ArrayList<>();
-    for (Config.TableField field : tableInfo.fields) {
+    for (TableInserterConfig.TableField field : tableInfo.fields) {
       TableFieldSchema fieldSchema = new TableFieldSchema();
       fieldSchema.setMode(field.nullable ? "NULLABLE" : "REQUIRED");
       fieldSchema.setName(field.name);

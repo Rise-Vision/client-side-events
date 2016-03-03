@@ -1,12 +1,14 @@
-## Client side events table generator
+# Client side events Job and Table Inserter
 
-Creates daily tables for client side events project.
+This project is able to do two things:
 
-Table names will be of the format [tableNamePrefix]YYYYMMDD for use in table date range queries.
+- create daily tables for client side events project.
 
-### Configuration
+- run scheduled queries (currently 4- and 24-hour intervals)
 
-The configuration file `(src/main/resources/config.json)` specifies one or more table schemas ,each having one or more fields:
+## Table Inserter Configuration
+
+The configuration file `(src/main/resources/table-inserter-config.json)` specifies one or more table schemas ,each having one or more fields:
 
 ```json
 {
@@ -29,22 +31,62 @@ The configuration file `(src/main/resources/config.json)` specifies one or more 
 }
 ```
 
-### Usage
+Table names will be of the format [tableNamePrefix]YYYYMMDD for use in table date range queries.
 
- - Set up the configuration file as required
+## Job Inserter Configuration
+
+To add a query, you need to modify the configuration file `(src/main/resources/job-inserter-config.json)`
+and add a query under `src/main/resources/queries/`
+
+The configuration file follows the following schema:
+
+```json
+{
+  "projectId": "billing-project",
+  "configuration": {
+    "query": {
+      "writeDisposition": "WRITE_TRUNCATE",
+      "destinationTable": {
+        "projectId": "destination-project",
+        "datasetId": "destination_dataset"
+      }
+    }
+  },
+  "every4Hours": [
+    {
+      "destinationTableId": "destination_table_name",
+      "fileName": "queries/query-file-name.sql"
+    }
+  ],
+  "every24Hours": [
+    ...
+  ]
+}
+```
+
+The query result will be stored in `[destination-project:destination_dataset.destination_table_name]`.
+
+N.B. 1. the billing project, destination project, and destination dataset are currently global configuration options
+that are identical for all jobs.
+
+N.B. 2. the results will overwrite the previous contents of the table
+
+## Usage
+
+ - Set up the configuration files as required
  - Deploy to an appengine project having service account permissions to the target table project
 
 ```bash
 mvn appengine:update -Dappengine.appId=project-app-id -Ddeploy.version=[version-num] -Ddeploy.module=[default | module-name]
 ```
 
-### Unit Tests
+## Unit Tests
 
 ```bash
 mvn test
 ```
 
-### Integration Tests
+## Integration Tests
 
 ```bash
 mvn verify

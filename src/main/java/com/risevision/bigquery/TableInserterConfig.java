@@ -1,9 +1,9 @@
-package tejohnso.bigquery;
+package com.risevision.bigquery;
 
 import java.util.List;
 
-class Config {
-  public Config(){}
+class TableInserterConfig {
+  public TableInserterConfig(){}
   boolean includeCurrentDay;
   int numberOfDays;
   List<TableInfo> tables;

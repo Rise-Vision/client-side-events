@@ -1,4 +1,4 @@
-package tejohnso.bigquery;
+package com.risevision.bigquery;
 
 import java.util.*;
 
@@ -10,12 +10,12 @@ class TableInserter {
   }
 
   public void insertTables() {
-    Config config = ConfigLoader.getConfig();
+    TableInserterConfig config = ConfigLoader.getTableInserterConfig();
     int dateOffset = config.includeCurrentDay ? 0 : 1;
     int numDaysToInsert = config.numberOfDays;
 
     for (int i = 0; i < numDaysToInsert; i += 1) {
-      for (Config.TableInfo info : config.tables) {
+      for (TableInserterConfig.TableInfo info : config.tables) {
         info.name = info.tableNamePrefix + getDate(dateOffset);
 
         api.insertTable(info);
