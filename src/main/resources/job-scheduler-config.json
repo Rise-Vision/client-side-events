@@ -17,6 +17,22 @@
     {
       "destinationTableId": "NewInstallationStats",
       "fileName": "queries/new-installation-stats.sql"
+    },
+    {
+      "destinationTableId": "RiseCacheReliabilityByVersion",
+      "fileName": "queries/rise-cache-reliability-by-version.sql"
+    },
+    {
+      "destinationTableId": "ImageWidgetUsageByMonth",
+      "fileName": "queries/image-widget-usage-by-month.sql"
+    },
+    {
+      "destinationTableId": "VideoWidgetUsageByMonth",
+      "fileName": "queries/video-widget-usage-by-month.sql"
+    },
+    {
+      "destinationTableId": "RiseCacheUsage",
+      "fileName": "queries/rise-cache-usage.sql"
     }
   ],
   "every24Hours": [
