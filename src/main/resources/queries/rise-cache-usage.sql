@@ -1,0 +1,1 @@
+SELECT * FROM [client-side-events:Rise_Cache.CacheVersion2]
