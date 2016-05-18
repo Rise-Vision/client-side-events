@@ -39,6 +39,10 @@
     {
       "destinationTableId": "DisplayCountByInstallerType",
       "fileName": "queries/display-count-by-installer-type.sql"
+    },
+    {
+      "destinationTableId": "PlayerReliabilityStats",
+      "fileName": "queries/player-reliability-stats.sql"
     }
   ]
 }
