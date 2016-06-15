@@ -80,6 +80,13 @@ N.B. 2. the results will overwrite the previous contents of the table
 mvn appengine:update -Dappengine.appId=project-app-id -Ddeploy.version=[version-num] -Ddeploy.module=[default | module-name]
 ```
 
+## Troubleshooting job scheduler
+
+To test the job scheduler, make a request for `/insertJobs?interval=x` where x
+is the interval that includes the new jobs. If the job does not cause the target
+table to be updated, use `bq ls -a -j client-side-events` and look for failures.
+Then use `bq show -j <job_id>` and look for the error message.
+
 ## Unit Tests
 
 ```bash
