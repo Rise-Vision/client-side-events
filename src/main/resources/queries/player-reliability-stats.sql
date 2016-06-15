@@ -1,1 +1,1 @@
-SELECT * FROM [client-side-events:Installer_Events.PlayerReliabilityStats]
+SELECT * FROM [client-side-events:Native_Events.PlayerReliabilityStats]
