@@ -43,6 +43,10 @@
     {
       "destinationTableId": "PlayerReliabilityStats",
       "fileName": "queries/player-reliability-stats.sql"
+    },
+    {
+      "destinationTableId": "DisplayCosts",
+      "fileName": "queries/display-costs.sql"
     }
   ]
 }
