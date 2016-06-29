@@ -1,0 +1,1 @@
+SELECT * FROM [rvaserver2:appengine_logs.DisplayCosts]
