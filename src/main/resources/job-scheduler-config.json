@@ -47,6 +47,10 @@
     {
       "destinationTableId": "DisplayCosts",
       "fileName": "queries/display-costs.sql"
+    },
+    {
+      "destinationTableId": "MultipleUnreliableV3StartsPlayerCount",
+      "fileName": "multiple-unreliable-v3-starts-player-count.sql"
     }
   ]
 }
