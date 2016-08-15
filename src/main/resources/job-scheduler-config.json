@@ -33,6 +33,10 @@
     {
       "destinationTableId": "RiseCacheUsage",
       "fileName": "queries/rise-cache-usage.sql"
+    },
+    {
+      "destinationTableId": "MultipleUnreliableV3StartsPlayerCount",
+      "fileName": "multiple-unreliable-v3-starts-player-count.sql"
     }
   ],
   "every24Hours": [
