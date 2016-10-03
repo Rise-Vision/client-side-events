@@ -19,22 +19,6 @@
       "fileName": "queries/new-installation-stats.sql"
     },
     {
-      "destinationTableId": "RiseCacheReliabilityByVersion",
-      "fileName": "queries/rise-cache-reliability-by-version.sql"
-    },
-    {
-      "destinationTableId": "ImageWidgetUsageByMonth",
-      "fileName": "queries/image-widget-usage-by-month.sql"
-    },
-    {
-      "destinationTableId": "VideoWidgetUsageByMonth",
-      "fileName": "queries/video-widget-usage-by-month.sql"
-    },
-    {
-      "destinationTableId": "RiseCacheUsage",
-      "fileName": "queries/rise-cache-usage.sql"
-    },
-    {
       "destinationTableId": "MultipleUnreliableV3StartsPlayerCount",
       "fileName": "queries/multiple-unreliable-v3-starts-player-count.sql"
     }
@@ -51,6 +35,30 @@
     {
       "destinationTableId": "DisplayCosts",
       "fileName": "queries/display-costs.sql"
+    },
+    {
+      "destinationTableId": "ImageWidgetUsageByMonth",
+      "fileName": "queries/image-widget-usage-by-month.sql"
+    },
+    {
+      "destinationTableId": "VideoWidgetUsageByMonth",
+      "fileName": "queries/video-widget-usage-by-month.sql"
+    },
+    {
+      "destinationTableId": "TimeDateUsageByMonth",
+      "fileName": "queries/time-date-widget-usage-by-month.sql"
+    },
+    {
+      "destinationTableId": "TextUsageByMonth",
+      "fileName": "queries/text-widget-usage-by-month.sql"
+    },
+    {
+      "destinationTableId": "WebpageUsageByMonth",
+      "fileName": "queries/webpage-widget-usage-by-month.sql"
+    },
+    {
+      "destinationTableId": "RssUsageByMonth",
+      "fileName": "queries/rss-widget-usage-by-month.sql"
     }
   ]
 }
