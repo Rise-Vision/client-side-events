@@ -37,6 +37,14 @@
     {
       "destinationTableId": "MultipleUnreliableV3StartsPlayerCount",
       "fileName": "queries/multiple-unreliable-v3-starts-player-count.sql"
+    },
+    {
+      "destinationTableId": "ViewerExceptionSummary",
+      "fileName": "queries/viewer-exception-summary.sql"
+    },
+    {
+      "destinationTableId": "ViewerExceptionDetails",
+      "fileName": "queries/viewer-exception-details.sql"
     }
   ],
   "every24Hours": [
