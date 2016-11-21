@@ -29,6 +29,10 @@
     {
       "destinationTableId": "ViewerExceptionDetails",
       "fileName": "queries/viewer-exception-details.sql"
+    },
+    {
+      "destinationTableId": "ViewerCrashDisplayCount",
+      "fileName": "queries/viewer-display-crash.sql"
     }
   ],
   "every24Hours": [
