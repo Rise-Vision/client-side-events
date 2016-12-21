@@ -61,6 +61,10 @@
       "fileName": "queries/rss-widget-usage-by-month.sql"
     },
     {
+      "destinationTableId": "VideoDailyReliability",
+      "fileName": "queries/video-daily-reliability.sql"
+    },
+    {
       "destinationTableId": "ViewerExceptionSummary",
       "fileName": "queries/viewer-exception-summary.sql"
     },
