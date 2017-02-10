@@ -65,6 +65,26 @@
       "fileName": "queries/video-daily-reliability.sql"
     },
     {
+      "destinationTableId": "ImageDailyReliability",
+      "fileName": "queries/image-daily-reliability.sql"
+    },
+    {
+      "destinationTableId": "TextDailyReliability",
+      "fileName": "queries/text-daily-reliability.sql"
+    },
+    {
+      "destinationTableId": "RssDailyReliability",
+      "fileName": "queries/rss-daily-reliability.sql"
+    },
+    {
+      "destinationTableId": "SpreadsheetDailyReliability",
+      "fileName": "queries/spreadsheet-daily-reliability.sql"
+    },
+    {
+      "destinationTableId": "CacheV2DailyReliability",
+      "fileName": "queries/cache-v2-daily-reliability.sql"
+    },
+    {
       "destinationTableId": "ViewerExceptionSummary",
       "fileName": "queries/viewer-exception-summary.sql"
     },
