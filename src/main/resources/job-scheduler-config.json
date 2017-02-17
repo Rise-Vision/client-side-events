@@ -85,6 +85,10 @@
       "fileName": "queries/cache-v2-daily-reliability.sql"
     },
     {
+      "destinationTableId": "TickerDailyReliability",
+      "fileName": "queries/ticker-daily-reliability.sql"
+    },
+    {
       "destinationTableId": "ViewerExceptionSummary",
       "fileName": "queries/viewer-exception-summary.sql"
     },

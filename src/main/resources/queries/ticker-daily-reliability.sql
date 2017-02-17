@@ -1,0 +1,1 @@
+SELECT * FROM [ticker-client-logging:tickerClient.TickerDailyReliability]
