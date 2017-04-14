@@ -101,8 +101,8 @@
       "fileName": "queries/viewer-display-crash.sql"
     },
     {
-    "destinationTableId": "ViewerOfflineReliability",
-    "fileName": "queries/viewer-offline-reliability.sql"
+    "destinationTableId": "ViewerDailyReliability",
+    "fileName": "queries/viewer-daily-reliability.sql"
     },
     {
       "destinationTableId": "DisplayNetworkReliability",
