@@ -29,6 +29,10 @@
       "fileName": "queries/display-count-by-installer-type.sql"
     },
     {
+      "destinationTableId": "PlayerCountColumnsByOSCategory",
+      "fileName": "queries/player-count-columns-by-os-category.sql"
+    },
+    {
       "destinationTableId": "PlayerReliabilityStats",
       "fileName": "queries/player-reliability-stats.sql"
     },
