@@ -109,6 +109,14 @@
     "fileName": "queries/viewer-daily-reliability.sql"
     },
     {
+    "destinationTableId": "WidgetReadyReliability",
+    "fileName": "queries/widget-ready-reliability.sql"
+    },
+    {
+    "destinationTableId": "DisplaysNotLaunchingViewer",
+    "fileName": "queries/viewer-launch-reliability.sql"
+    },
+    {
       "destinationTableId": "DisplayNetworkReliability",
       "fileName": "queries/display-network-reliability.sql"
     }
