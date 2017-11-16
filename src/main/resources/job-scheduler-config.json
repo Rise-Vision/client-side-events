@@ -29,10 +29,6 @@
       "fileName": "queries/display-count-by-installer-type.sql"
     },
     {
-      "destinationTableId": "DisplayInfo",
-      "fileName": "queries/display-info.sql"
-    },
-    {
       "destinationTableId": "PlayerCountColumnsByOSCategory",
       "fileName": "queries/player-count-columns-by-os-category.sql"
     },
