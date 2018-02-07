@@ -15,6 +15,10 @@
       "fileName": "queries/upgrade-stats.sql"
     },
     {
+      "destinationTableId": "ModuleUpgradeStats",
+      "fileName": "queries/module-upgrade-stats.sql"
+    },
+    {
       "destinationTableId": "NewInstallationStats",
       "fileName": "queries/new-installation-stats.sql"
     },
