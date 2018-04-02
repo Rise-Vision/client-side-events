@@ -23,6 +23,10 @@
       "fileName": "queries/new-installation-stats.sql"
     },
     {
+      "destinationTableId": "PlayerModuleStats",
+      "fileName": "queries/player-module-stats.sql"
+    },
+    {
       "destinationTableId": "MultipleUnreliableV3StartsPlayerCount",
       "fileName": "queries/multiple-unreliable-v3-starts-player-count.sql"
     }
