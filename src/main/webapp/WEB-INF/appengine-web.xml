@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
-    <application>${app.id}</application>
-    <version>${app.version}</version>
-    <module>${deploy.module}</module>
+	<runtime>java8</runtime>
+	<service>default</service>
+	<url-stream-handler>urlfetch</url-stream-handler>
+
     <threadsafe>true</threadsafe>
     
     <system-properties>
