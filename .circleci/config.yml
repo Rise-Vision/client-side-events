@@ -1,0 +1,51 @@
+version: 2
+
+jobs:
+  "build":
+    docker: &DOCKERIMAGE
+      - image: jenkinsrise/cci-v2-docker-java8-gcloud:0.0.1
+    working_directory: ~/client-side-events
+    
+    steps:
+      - checkout
+      - restore_cache:
+          key: client-side-events-{{ checksum "pom.xml" }}
+      - run: mvn dependency:go-offline
+      - run: mvn clean package
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: client-side-events-{{ checksum "pom.xml" }}
+          
+  "deploy_prod":
+    docker: *DOCKERIMAGE
+    working_directory: ~/client-side-events
+    steps:
+      - checkout
+      - restore_cache:
+          key: client-side-events-{{ checksum "pom.xml" }}
+      - run:
+          name: Authenticate with GCloud
+          command: |    
+            echo $ACCT_AUTH | base64 --decode --ignore-garbage > ${HOME}/gcloud-service-key.json
+            sudo gcloud --quiet components update
+            gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
+            gcloud config set project $PROJECT_ID  
+      - run:
+          name: Deploy
+          command: |
+            mvn clean
+            mvn appengine:deploy -DskipTests -Dapp.deploy.version=r$(echo -n $((CIRCLE_BUILD_NUM%10))) -Dapp.deploy.promote=true -Dapp.deploy.project=client-side-events        
+          
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - "build"
+      - "deploy_prod":
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
