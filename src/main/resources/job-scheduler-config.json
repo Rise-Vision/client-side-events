@@ -77,6 +77,10 @@
       "fileName": "queries/rss-widget-usage-by-month.sql"
     },
     {
+      "destinationTableId": "TwitterUsageByMonth",
+      "fileName": "queries/twitter-component-usage-by-month.sql"
+    },
+    {
       "destinationTableId": "VideoDailyReliability",
       "fileName": "queries/video-daily-reliability.sql"
     },
@@ -91,6 +95,10 @@
     {
       "destinationTableId": "RssDailyReliability",
       "fileName": "queries/rss-daily-reliability.sql"
+    },
+    {
+      "destinationTableId": "TwitterDailyReliability",
+      "fileName": "queries/twitter-daily-reliability.sql"
     },
     {
       "destinationTableId": "SpreadsheetDailyReliability",
