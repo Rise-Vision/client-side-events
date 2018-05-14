@@ -139,6 +139,10 @@
     {
       "destinationTableId": "DisplayNetworkReliability",
       "fileName": "queries/display-network-reliability.sql"
+    },
+    {
+      "destinationTableId": "TwitterUsageUnlicensed",
+      "fileName": "queries/twitter-usage-unlicensed.sql"
     }
   ]
 }
