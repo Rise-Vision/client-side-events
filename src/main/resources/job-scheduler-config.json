@@ -27,6 +27,14 @@
       "fileName": "queries/player-module-stats.sql"
     },
     {
+      "destinationTableId": "ImageRLSStats",
+      "fileName": "queries/image-rls-stats.sql"
+    },
+    {
+      "destinationTableId": "VideoRLSStats",
+      "fileName": "queries/video-rls-stats.sql"
+    },
+    {
       "destinationTableId": "MultipleUnreliableV3StartsPlayerCount",
       "fileName": "queries/multiple-unreliable-v3-starts-player-count.sql"
     }
