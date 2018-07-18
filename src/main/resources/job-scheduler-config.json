@@ -31,8 +31,16 @@
       "fileName": "queries/image-rls-stats.sql"
     },
     {
+      "destinationTableId": "ImageFolderRLSStats",
+      "fileName": "queries/image-folder-rls-stats.sql"
+    },
+    {
       "destinationTableId": "VideoRLSStats",
       "fileName": "queries/video-rls-stats.sql"
+    },
+    {
+      "destinationTableId": "VideoFolderRLSStats",
+      "fileName": "queries/video-folder-rls-stats.sql"
     },
     {
       "destinationTableId": "MultipleUnreliableV3StartsPlayerCount",
