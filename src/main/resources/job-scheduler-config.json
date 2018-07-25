@@ -121,6 +121,10 @@
       "fileName": "queries/spreadsheet-daily-reliability.sql"
     },
     {
+      "destinationTableId": "CalendarStats",
+      "fileName": "queries/calendar-stats.sql"
+    },
+    {
       "destinationTableId": "CacheV2DailyReliability",
       "fileName": "queries/cache-v2-daily-reliability.sql"
     },
