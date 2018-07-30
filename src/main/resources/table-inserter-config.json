@@ -256,6 +256,21 @@
           "name": "ts",
           "type": "TIMESTAMP",
           "nullable": false
+        },
+        {
+          "name": "version",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "local_url",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "configuration",
+          "type": "string",
+          "nullable": true
         }
       ]
     },
