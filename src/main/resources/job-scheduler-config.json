@@ -35,12 +35,20 @@
       "fileName": "queries/image-folder-rls-stats.sql"
     },
     {
+      "destinationTableId": "ImageNonRLSStats",
+      "fileName": "queries/image-non-rls-stats.sql"
+    },
+    {
       "destinationTableId": "VideoRLSStats",
       "fileName": "queries/video-rls-stats.sql"
     },
     {
       "destinationTableId": "VideoFolderRLSStats",
       "fileName": "queries/video-folder-rls-stats.sql"
+    },
+    {
+      "destinationTableId": "VideoNonRLSStats",
+      "fileName": "queries/video-non-rls-stats.sql"
     },
     {
       "destinationTableId": "MultipleUnreliableV3StartsPlayerCount",
@@ -69,14 +77,6 @@
       "fileName": "queries/display-costs.sql"
     },
     {
-      "destinationTableId": "ImageWidgetUsageByMonth",
-      "fileName": "queries/image-widget-usage-by-month.sql"
-    },
-    {
-      "destinationTableId": "VideoWidgetUsageByMonth",
-      "fileName": "queries/video-widget-usage-by-month.sql"
-    },
-    {
       "destinationTableId": "TimeDateUsageByMonth",
       "fileName": "queries/time-date-widget-usage-by-month.sql"
     },
@@ -95,14 +95,6 @@
     {
       "destinationTableId": "TwitterUsageByMonth",
       "fileName": "queries/twitter-component-usage-by-month.sql"
-    },
-    {
-      "destinationTableId": "VideoDailyReliability",
-      "fileName": "queries/video-daily-reliability.sql"
-    },
-    {
-      "destinationTableId": "ImageDailyReliability",
-      "fileName": "queries/image-daily-reliability.sql"
     },
     {
       "destinationTableId": "TextDailyReliability",
