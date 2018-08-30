@@ -51,6 +51,22 @@
       "fileName": "queries/video-non-rls-stats.sql"
     },
     {
+      "destinationTableId": "TextDailyReliability",
+      "fileName": "queries/text-daily-reliability.sql"
+    },
+    {
+      "destinationTableId": "RssDailyReliability",
+      "fileName": "queries/rss-daily-reliability.sql"
+    },
+    {
+      "destinationTableId": "SpreadsheetDailyReliability",
+      "fileName": "queries/spreadsheet-daily-reliability.sql"
+    },
+    {
+      "destinationTableId": "CalendarStats",
+      "fileName": "queries/calendar-stats.sql"
+    },
+    {
       "destinationTableId": "MultipleUnreliableV3StartsPlayerCount",
       "fileName": "queries/multiple-unreliable-v3-starts-player-count.sql"
     }
@@ -97,24 +113,8 @@
       "fileName": "queries/twitter-component-usage-by-month.sql"
     },
     {
-      "destinationTableId": "TextDailyReliability",
-      "fileName": "queries/text-daily-reliability.sql"
-    },
-    {
-      "destinationTableId": "RssDailyReliability",
-      "fileName": "queries/rss-daily-reliability.sql"
-    },
-    {
       "destinationTableId": "TwitterDailyReliability",
       "fileName": "queries/twitter-daily-reliability.sql"
-    },
-    {
-      "destinationTableId": "SpreadsheetDailyReliability",
-      "fileName": "queries/spreadsheet-daily-reliability.sql"
-    },
-    {
-      "destinationTableId": "CalendarStats",
-      "fileName": "queries/calendar-stats.sql"
     },
     {
       "destinationTableId": "CacheV2DailyReliability",

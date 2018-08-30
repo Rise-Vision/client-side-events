@@ -1,1 +1,3 @@
-SELECT * FROM [client-side-events:Widget_Events.TextDailyReliability]
+#standardSQL
+
+SELECT * FROM `client-side-events.Widget_Events.TextDailyReliability`
