@@ -155,6 +155,18 @@
     {
       "destinationTableId": "TwitterUsageUnlicensed",
       "fileName": "queries/twitter-usage-unlicensed.sql"
+    },
+    {
+      "destinationTableId": "ContentUpdateFrequency",
+      "fileName": "queries/content-update-frequency.sql"
+    },
+    {
+      "destinationTableId": "ContentDisplaysWithUpdate",
+      "fileName": "queries/content-displays-with-update.sql"
+    },
+    {
+      "destinationTableId": "DailyMonthlyActiveCompanyRatio",
+      "fileName": "queries/daily-monthly-active-company-ratio.sql"
     }
   ]
 }
