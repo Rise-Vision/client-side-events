@@ -69,6 +69,10 @@
     {
       "destinationTableId": "MultipleUnreliableV3StartsPlayerCount",
       "fileName": "queries/multiple-unreliable-v3-starts-player-count.sql"
+    },
+    {
+      "destinationTableId": "OAuthTokenProviderStats",
+      "fileName": "queries/oauth-token-provider-stats.sql"
     }
   ],
   "every24Hours": [
