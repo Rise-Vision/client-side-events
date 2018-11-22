@@ -171,6 +171,14 @@
     {
       "destinationTableId": "DailyMonthlyActiveCompanyRatio",
       "fileName": "queries/daily-monthly-active-company-ratio.sql"
+    },
+    {
+      "destinationTableId": "ComponentStats",
+      "fileName": "queries/component-stats.sql"
+    },
+    {
+      "destinationTableId": "ComponentErrorsAndWarnings",
+      "fileName": "queries/component-errors-and-warnings.sql"
     }
   ]
 }
