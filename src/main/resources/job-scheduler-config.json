@@ -175,6 +175,10 @@
     {
       "destinationTableId": "ComponentErrorsAndWarnings",
       "fileName": "queries/component-errors-and-warnings.sql"
+    },
+    {
+      "destinationTableId": "ClientSideApplicationsTableStats",
+      "fileName": "queries/client-side-applications-table-stats.sql"
     }
   ]
 }
