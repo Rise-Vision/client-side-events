@@ -177,6 +177,14 @@
       "fileName": "queries/component-errors-and-warnings.sql"
     },
     {
+      "destinationTableId": "K12DisplaysUsingTemplatesStats",
+      "fileName": "queries/k12-displays-using-templates-stats.sql"
+    },
+    {
+      "destinationTableId": "K12CompaniesUsingTemplatesStats",
+      "fileName": "queries/k12-companies-using-templates-stats.sql"
+    },
+    {
       "destinationTableId": "ClientSideApplicationsTableStats",
       "fileName": "queries/client-side-applications-table-stats.sql"
     }
