@@ -187,6 +187,10 @@
     {
       "destinationTableId": "ClientSideApplicationsTableStats",
       "fileName": "queries/client-side-applications-table-stats.sql"
+    },
+    {
+      "destinationTableId": "DisplaysUsingHtmlTemplates",
+      "fileName": "queries/displays-using-html-templates.sql"
     }
   ]
 }
