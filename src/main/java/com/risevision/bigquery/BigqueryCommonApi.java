@@ -13,6 +13,8 @@ import java.util.logging.Logger;
 public class BigqueryCommonApi {
   private GoogleCredential credential;
   protected Bigquery bqClient;
+
+  private static final String SHEETS_SCOPE = "https://www.googleapis.com/auth/drive.readonly";
   private static final Logger log = Logger.getAnonymousLogger();
 
    public BigqueryCommonApi(HttpTransport transport) {
@@ -27,7 +29,7 @@ public class BigqueryCommonApi {
       return;
     }
 
-    credential = credential.createScoped(Arrays.asList(BigqueryScopes.BIGQUERY));
+    credential = credential.createScoped(Arrays.asList(BigqueryScopes.BIGQUERY, SHEETS_SCOPE));
 
     bqClient = new Bigquery.Builder
     (transport, JacksonFactory.getDefaultInstance(), credential)
