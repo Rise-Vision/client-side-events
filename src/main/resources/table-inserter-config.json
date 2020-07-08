@@ -271,6 +271,21 @@
           "name": "configuration",
           "type": "string",
           "nullable": true
+        },
+        {
+          "name": "presentation_type",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "schedule_id",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "unique_id",
+          "type": "string",
+          "nullable": true
         }
       ]
     },
