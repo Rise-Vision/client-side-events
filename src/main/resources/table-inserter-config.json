@@ -356,7 +356,7 @@
     {
       "projectId": "client-side-events",
       "dataset": "Apps_Events",
-      "tableNamePrefix": "events",
+      "tableNamePrefix": "apps_events",
       "fields": [
         {
           "name": "event",
