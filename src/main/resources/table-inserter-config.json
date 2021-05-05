@@ -355,38 +355,6 @@
     },
     {
       "projectId": "client-side-events",
-      "dataset": "Apps_Events",
-      "tableNamePrefix": "events",
-      "fields": [
-        {
-          "name": "event",
-          "type": "string",
-          "nullable": false
-        },
-        {
-          "name": "event_details",
-          "type": "string",
-          "nullable": true
-        },
-        {
-          "name": "event_value",
-          "type": "FLOAT",
-          "nullable": true
-        },
-        {
-          "name": "host",
-          "type": "string",
-          "nullable": true
-        },
-        {
-          "name": "ts",
-          "type": "TIMESTAMP",
-          "nullable": false
-        }
-      ]
-    },
-    {
-      "projectId": "client-side-events",
       "dataset": "Installer_Events",
       "tableNamePrefix": "events",
       "fields": [
