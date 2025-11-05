@@ -1,1 +1,2 @@
-SELECT * FROM [client-side-events:Installer_Events.PlayerCountColumnsByOSCategory]
+#standardSql
+SELECT * FROM `client-side-events.Installer_Events.PlayerCountColumnsByOSCategory`
